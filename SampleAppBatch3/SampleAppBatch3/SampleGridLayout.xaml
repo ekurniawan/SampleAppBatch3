@@ -11,6 +11,7 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120" />
@@ -25,6 +26,10 @@
             <Label Text="Age :" FontSize="Medium" Grid.Row="2" Grid.Column="0"
                    VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
             <Entry Placeholder="inser age" Grid.Row="2" Keyboard="Numeric" Grid.Column="1" />
+            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="0">
+                <Button Text="Submit" />
+                <Button Text="Cancel" />
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
