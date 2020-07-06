@@ -9,7 +9,7 @@ namespace SampleAppBatch3
         public App()
         {
             InitializeComponent();
-            MainPage = new SampleAbsoluteLayout();
+            MainPage = new SampleGridLayout();
         }
 
         protected override void OnStart()

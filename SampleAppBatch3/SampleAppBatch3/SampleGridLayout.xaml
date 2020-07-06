@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Sample Grid Layout"
+             x:Class="SampleAppBatch3.SampleGridLayout">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="100*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="First Name :" FontSize="Medium" Grid.Row="0" Grid.Column="0"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+            <Entry Placeholder="inser first name" Grid.Row="0" Grid.Column="1" />
+            <Label Text="Last Name :" FontSize="Medium" Grid.Row="1" Grid.Column="0"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+            <Entry Placeholder="inser last name" Grid.Row="1" Grid.Column="1" />
+            <Label Text="Age :" FontSize="Medium" Grid.Row="2" Grid.Column="0"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+            <Entry Placeholder="inser age" Grid.Row="2" Keyboard="Numeric" Grid.Column="1" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
