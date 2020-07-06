@@ -18,5 +18,10 @@ namespace SampleAppBatch3
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Keterangan", "Hello Xamarin", "OK");
+        }
     }
 }

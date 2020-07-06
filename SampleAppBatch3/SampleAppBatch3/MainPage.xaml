@@ -8,10 +8,14 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Xamarin Android Training" 
-           HorizontalOptions="Start" />
-        <Label Text="Hello World" HorizontalOptions="Start" />
-        <Entry Placeholder="insert first name"  />
+        <Label Text="First Name :" FontSize="Medium" />
+        <Entry x:Name="txtFirstName" Placeholder="insert first name"  />
+        <Label Text="Last Name :" FontSize="Medium" />
+        <Entry x:Name="txtLastName" Placeholder="insert last name" />
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnSubmit" Text="Submit" Clicked="btnSubmit_Clicked" />
+            <Button Text="Cancel" />
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
