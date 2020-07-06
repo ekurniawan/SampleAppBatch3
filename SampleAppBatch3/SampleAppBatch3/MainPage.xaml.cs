@@ -21,7 +21,9 @@ namespace SampleAppBatch3
 
         private void btnSubmit_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Keterangan", "Hello Xamarin", "OK");
+            var firstName = txtFirstName.Text;
+            var lastName = txtLastName.Text;
+            DisplayAlert("Keterangan", $"Hello {firstName} {lastName}", "OK");
         }
     }
 }

@@ -8,10 +8,11 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="First Name :" FontSize="Medium" />
+        <Label Text="First Name :" FontSize="Medium"  />
         <Entry x:Name="txtFirstName" Placeholder="insert first name"  />
         <Label Text="Last Name :" FontSize="Medium" />
         <Entry x:Name="txtLastName" Placeholder="insert last name" />
+
         <StackLayout Orientation="Horizontal">
             <Button x:Name="btnSubmit" Text="Submit" Clicked="btnSubmit_Clicked" />
             <Button Text="Cancel" />
