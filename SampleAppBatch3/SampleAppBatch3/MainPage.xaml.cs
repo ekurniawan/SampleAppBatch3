@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+//
 namespace SampleAppBatch3
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
