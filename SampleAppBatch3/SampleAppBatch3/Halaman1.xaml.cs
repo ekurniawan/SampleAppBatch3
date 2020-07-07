@@ -22,5 +22,11 @@ namespace SampleAppBatch3
             var username = txtUsername.Text;
             await Navigation.PushAsync(new Halaman2(username,"rahasia"));
         }
+
+        private async void btnSetAppCurrent_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.Properties["username"] = txtUsername.Text;
+            await DisplayAlert("Keterangan", "Applciation Current berhasil diisi", "OK");
+        }
     }
 }

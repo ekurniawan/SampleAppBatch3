@@ -29,5 +29,10 @@ namespace SampleAppBatch3
                 lblUsername.Text = _username;
         }
 
+        private async void btnCekAppCurrent_Clicked(object sender, EventArgs e)
+        {
+            var data = Application.Current.Properties["username"].ToString();
+            await DisplayAlert("Keterangan", $"Data: {data}", "OK");
+        }
     }
 }

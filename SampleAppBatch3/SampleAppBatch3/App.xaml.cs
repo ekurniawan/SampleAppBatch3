@@ -10,6 +10,8 @@ namespace SampleAppBatch3
         {
             InitializeComponent();
             MainPage = new NavigationPage(new MenuPage());
+
+            Application.Current.Properties["username"] = string.Empty;
         }
 
         protected override void OnStart()

@@ -10,6 +10,7 @@
             <Label x:Name="lblUsername" FontSize="Large"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="btnCekAppCurrent" Text="Get App Current" Clicked="btnCekAppCurrent_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
