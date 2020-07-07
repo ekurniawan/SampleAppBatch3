@@ -33,6 +33,14 @@ namespace SampleAppBatch3
                 Description = "Xamarin with Single UI for all platforms"
             });
             lvData.ItemsSource = lstItems;
+            lvData.SelectedItem = lstItems[1];
+        }
+
+        private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var data = (ListItem)e.Item;
+            await DisplayAlert("Keterangan",
+                $"Title: {data.Title}, Desc: {data.Description}", "OK");
         }
     }
 }
