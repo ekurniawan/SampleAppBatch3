@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleAppBatch3.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,23 @@ namespace SampleAppBatch3
         public SampleBindingList()
         {
             InitializeComponent();
+            List<ListItem> lstItems = new List<ListItem>();
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin for Android",
+                Description = "Xamarin with Traditional Android Native UI"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin for IOS",
+                Description = "Xamarin with Traditional IOS Native UI"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Xamarin with Single UI for all platforms"
+            });
+            lvData.ItemsSource = lstItems;
         }
     }
 }

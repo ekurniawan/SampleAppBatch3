@@ -9,7 +9,7 @@ namespace SampleAppBatch3
         public App()
         {
             InitializeComponent();
-            MainPage = new SampleListView();
+            MainPage = new SampleBindingList();
         }
 
         protected override void OnStart()

@@ -22,6 +22,7 @@ namespace SampleAppBatch3
             lstNama.Add("Joni");
 
             lvData.ItemsSource = lstNama;
+            lvData.SelectedItem = lstNama[1];
         }
 
         private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
