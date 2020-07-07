@@ -26,5 +26,25 @@ namespace SampleAppBatch3
             };
             lvData.ItemsSource = lstItems;
         }
+
+        private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var data = (ListItem)e.Item;
+            await DisplayAlert("Keterangan", $"Data: {data.Title}", "OK");
+        }
+
+        private async void ButtonEdit_Clicked(object sender, EventArgs e)
+        {
+            var btnEdit = (Button)sender;
+            await DisplayAlert("Keterangan", 
+                $"Title yg diedit :{btnEdit.CommandParameter}", "OK");
+        }
+
+        private async void ButtonDelete_Clicked(object sender, EventArgs e)
+        {
+            var btnDelete = (Button)sender;
+            await DisplayAlert("Keterangan",
+                $"Title yg didelete: {btnDelete.CommandParameter}", "OK");
+        }
     }
 }

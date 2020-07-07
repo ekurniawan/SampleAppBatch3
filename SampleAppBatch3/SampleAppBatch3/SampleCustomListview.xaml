@@ -7,7 +7,7 @@
              x:Class="SampleAppBatch3.SampleCustomListview">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvData" HasUnevenRows="True">
+            <ListView x:Name="lvData" HasUnevenRows="True" ItemTapped="lvData_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -35,8 +35,10 @@
                                       VerticalOptions="Center" HorizontalOptions="Center" />
                                 <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="3" 
                                              Grid.ColumnSpan="2">
-                                    <Button Text="Edit" FontSize="Small" />
-                                    <Button Text="Delete" FontSize="Small" />
+                                    <Button Text="Edit" FontSize="Small" 
+                                            CommandParameter="{Binding Title}" Clicked="ButtonEdit_Clicked" />
+                                    <Button Text="Delete" FontSize="Small" 
+                                            CommandParameter="{Binding Title}" Clicked="ButtonDelete_Clicked" />
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
