@@ -17,6 +17,8 @@
         <StackLayout>
             <Button x:Name="btnListImage" Text="List Image" Clicked="btnListImage_Clicked" />
             <Button x:Name="btnCustomList" Text="Custom List" />
+            <Button x:Name="btnAlert" Text="Alert" Clicked="btnAlert_Clicked" />
+            <Button x:Name="btnActionSheet" Text="Action Sheet" Clicked="btnActionSheet_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

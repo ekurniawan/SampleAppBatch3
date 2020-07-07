@@ -31,5 +31,25 @@ namespace SampleAppBatch3
         {
             await Navigation.PushAsync(new SampleCustomListview());
         }
+
+        private async void btnAlert_Clicked(object sender, EventArgs e)
+        {
+            var result = await DisplayAlert("Konfirmasi", "Mau delete?", "Yes", "No");
+            if (result)
+            {
+                await DisplayAlert("Keterangan", "Anda menjawab Yes","OK");
+            }
+            else
+            {
+                await DisplayAlert("Keterangan", "Anda menjawab No", "OK");
+            }
+        }
+
+        private async void btnActionSheet_Clicked(object sender, EventArgs e)
+        {
+            var result = await DisplayActionSheet("Kirim via?", "Cancel", "Send",
+                "Google Mail", "MS Mail", "Yahoo Mail");
+            await DisplayAlert("Keterangan", $"Anda memilih: {result}", "OK");
+        }
     }
 }
