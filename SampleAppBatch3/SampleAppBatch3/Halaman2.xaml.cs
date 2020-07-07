@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,6 +33,15 @@ namespace SampleAppBatch3
         {
             var data = Application.Current.Properties["username"].ToString();
             await DisplayAlert("Keterangan", $"Data: {data}", "OK");
+        }
+
+        private async void btnGetPreferences_Clicked(object sender, EventArgs e)
+        {
+            if (Preferences.ContainsKey("username"))
+            {
+                var data = Preferences.Get("username", "");
+                await DisplayAlert("Keterangan", $"Data: {data}", "OK");
+            }
         }
     }
 }

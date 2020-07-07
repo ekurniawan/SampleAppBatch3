@@ -11,6 +11,8 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Button x:Name="btnCekAppCurrent" Text="Get App Current" Clicked="btnCekAppCurrent_Clicked" />
+            <Button x:Name="btnGetPreferences" Text="Get Preferences" 
+                    Clicked="btnGetPreferences_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

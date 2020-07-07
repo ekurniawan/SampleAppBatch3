@@ -11,6 +11,9 @@
             <Button x:Name="btnKirim" Text="Kirim" Clicked="btnKirim_Clicked" />
             <Button x:Name="btnSetAppCurrent" Text="Application Current" 
                     Clicked="btnSetAppCurrent_Clicked" />
+            <Button x:Name="btnPreferences" Text="Create Preferences" 
+                    Clicked="btnPreferences_Clicked" />
+            <Button x:Name="btnGetPreferences" Text="Get Preferences" Clicked="btnGetPreferences_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

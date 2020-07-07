@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace SampleAppBatch3
 {
@@ -27,6 +28,21 @@ namespace SampleAppBatch3
         {
             Application.Current.Properties["username"] = txtUsername.Text;
             await DisplayAlert("Keterangan", "Applciation Current berhasil diisi", "OK");
+        }
+
+        private async void btnPreferences_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Set("username", txtUsername.Text);
+            await DisplayAlert("Keterangan", "Preferences berhasil ditambahkan", "OK");
+        }
+
+        private async void btnGetPreferences_Clicked(object sender, EventArgs e)
+        {
+            if (Preferences.ContainsKey("username"))
+            {
+                var data = Preferences.Get("username", "");
+                await DisplayAlert("Keterangan", $"Data: {data}", "OK");
+            }
         }
     }
 }
