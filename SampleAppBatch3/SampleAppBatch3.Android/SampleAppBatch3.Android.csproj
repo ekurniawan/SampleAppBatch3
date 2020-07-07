@@ -85,7 +85,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\telpon.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SampleAppBatch3\SampleAppBatch3.csproj">
       <Project>{E7967B6A-4618-44F8-908A-A390AEB89E8C}</Project>
