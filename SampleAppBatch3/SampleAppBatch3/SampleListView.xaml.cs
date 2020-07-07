@@ -23,5 +23,11 @@ namespace SampleAppBatch3
 
             lvData.ItemsSource = lstNama;
         }
+
+        private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var data = (string)e.Item;
+            await DisplayAlert("Keterangan", $"Data yang dipilih: {data}", "OK");
+        }
     }
 }
