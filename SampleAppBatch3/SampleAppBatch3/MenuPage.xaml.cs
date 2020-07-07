@@ -21,5 +21,15 @@ namespace SampleAppBatch3
         {
             await Navigation.PushAsync(new SampleImageList());
         }
+
+        private async void menuSampleList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SampleListView());
+        }
+
+        private async void menuCustomList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SampleCustomListview());
+        }
     }
 }

@@ -29,5 +29,10 @@ namespace SampleAppBatch3
         {
             await Navigation.PushAsync(new SampleBindingList());
         }
+
+        private async void btnBack_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

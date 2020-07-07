@@ -5,6 +5,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" Title="Menu Page"
              x:Class="SampleAppBatch3.MenuPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuSampleList" Text="Sample Listview" Order="Secondary"
+                     Clicked="menuSampleList_Clicked" />
+        <ToolbarItem x:Name="menuCustomList" Text="Custom List" Order="Secondary"
+                     Clicked="menuCustomList_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <Button x:Name="btnListImage" Text="List Image" Clicked="btnListImage_Clicked" />
