@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Custom List View"
+             x:Class="SampleAppBatch3.SampleCustomListview">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvData" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                    <RowDefinition Height="35" />
+                                    <RowDefinition Height="35" />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100*" />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
+                                <Label Text="{Binding Description}" Grid.Column="0" 
+                                       Grid.Row="1" VerticalOptions="Center" />
+                                <Label Text="{Binding Price,StringFormat='Price: Rp.{0:N0}'}" 
+                                       Grid.Column="0" Grid.Row="2" VerticalOptions="Center"/>
+                                <Image Source="{Binding ImageSource}" WidthRequest="60"
+                                       Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"
+                                      VerticalOptions="Center" HorizontalOptions="Center" />
+                                <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="3" 
+                                             Grid.ColumnSpan="2">
+                                    <Button Text="Edit" FontSize="Small" />
+                                    <Button Text="Delete" FontSize="Small" />
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
