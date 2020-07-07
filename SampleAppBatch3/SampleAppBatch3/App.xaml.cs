@@ -9,7 +9,7 @@ namespace SampleAppBatch3
         public App()
         {
             InitializeComponent();
-            MainPage = new SampleCustomListview();
+            MainPage = new NavigationPage(new MenuPage());
         }
 
         protected override void OnStart()

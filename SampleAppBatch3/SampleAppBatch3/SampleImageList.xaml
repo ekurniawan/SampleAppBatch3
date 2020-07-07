@@ -15,6 +15,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button x:Name="btnBinding" Text="Sample Binding" Clicked="btnBinding_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

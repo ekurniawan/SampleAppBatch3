@@ -24,5 +24,10 @@ namespace SampleAppBatch3
             };
             lvData.ItemsSource = lstItems;
         }
+
+        private async void btnBinding_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SampleBindingList());
+        }
     }
 }
