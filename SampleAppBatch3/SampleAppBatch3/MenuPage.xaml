@@ -19,6 +19,7 @@
             <Button x:Name="btnCustomList" Text="Custom List" />
             <Button x:Name="btnAlert" Text="Alert" Clicked="btnAlert_Clicked" />
             <Button x:Name="btnActionSheet" Text="Action Sheet" Clicked="btnActionSheet_Clicked" />
+            <Button x:Name="btnHal1" Text="Halaman 1" Clicked="btnHal1_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

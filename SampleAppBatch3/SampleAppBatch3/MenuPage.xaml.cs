@@ -51,5 +51,10 @@ namespace SampleAppBatch3
                 "Google Mail", "MS Mail", "Yahoo Mail");
             await DisplayAlert("Keterangan", $"Anda memilih: {result}", "OK");
         }
+
+        private async void btnHal1_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Halaman1());
+        }
     }
 }
