@@ -20,7 +20,7 @@ namespace SampleAppBatch3
         private async void btnKirim_Clicked(object sender, EventArgs e)
         {
             var username = txtUsername.Text;
-            await Navigation.PushAsync(new Halaman2(username));
+            await Navigation.PushAsync(new Halaman2(username,"rahasia"));
         }
     }
 }
