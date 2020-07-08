@@ -3,23 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="SampleAppBatch3.MyTabbedPage">
+             mc:Ignorable="d" Title="My Tabbed"
+             x:Class="SampleAppBatch3.MyTabbedPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:SampleAppBatch3">
   <!--Pages can be added as references or inline-->
-    <ContentPage Title="Employee Details">
+    <local:SampleImageList Title="Image List" IconImageSource="telpon.png" />
+    <ContentPage Title="Employee Details" IconImageSource="telpon.png">
         <StackLayout>
             <Label Text="Employee Page" FontSize="Large" HorizontalTextAlignment="Center" />
             <Entry Placeholder="insert firstname" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Tab 2">
-        <StackLayout>
-            <Label Text="Tab 2" FontSize="Large" HorizontalTextAlignment="Center" />
-        </StackLayout>
-    </ContentPage>
-    <ContentPage Title="Tab 3">
-        <StackLayout>
-            <Label Text="Tab 3" FontSize="Large" HorizontalTextAlignment="Center" />
-        </StackLayout>
-    </ContentPage>
+    <local:SampleCustomListview Title="Custom List" IconImageSource="jam.png" />
+    <local:SampleGridLayout Title="Grid Layout" IconImageSource="jam.png" />
 </TabbedPage>
