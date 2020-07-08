@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SampleAppBatch3.MyTabbedPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Employee Details">
+        <StackLayout>
+            <Label Text="Employee Page" FontSize="Large" HorizontalTextAlignment="Center" />
+            <Entry Placeholder="insert firstname" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Tab 2">
+        <StackLayout>
+            <Label Text="Tab 2" FontSize="Large" HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Tab 3">
+        <StackLayout>
+            <Label Text="Tab 3" FontSize="Large" HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
