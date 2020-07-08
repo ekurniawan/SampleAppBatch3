@@ -23,7 +23,6 @@ namespace SampleAppBatch3
             var item = e.SelectedItem as MyMasterPageMasterMenuItem;
             if (item == null)
                 return;
-
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 

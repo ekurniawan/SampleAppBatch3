@@ -6,6 +6,10 @@
              mc:Ignorable="d"
              x:Class="SampleAppBatch3.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
