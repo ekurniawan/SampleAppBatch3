@@ -33,11 +33,11 @@ namespace SampleAppBatch3
             {
                 MenuItems = new ObservableCollection<MyMasterPageMasterMenuItem>(new[]
                 {
-                    new MyMasterPageMasterMenuItem { Id = 0, Title = "Page 1" },
-                    new MyMasterPageMasterMenuItem { Id = 1, Title = "Page 2" },
-                    new MyMasterPageMasterMenuItem { Id = 2, Title = "Page 3" },
-                    new MyMasterPageMasterMenuItem { Id = 3, Title = "Page 4" },
-                    new MyMasterPageMasterMenuItem { Id = 4, Title = "Page 5" },
+                    new MyMasterPageMasterMenuItem { Id = 0, Title = "Main Menu" },
+                    new MyMasterPageMasterMenuItem { Id = 1, Title = "Sample Image List" },
+                    new MyMasterPageMasterMenuItem { Id = 2, Title = "Sample Tabbed Page" },
+                    new MyMasterPageMasterMenuItem { Id = 3, Title = "Sample Custom List" },
+                    new MyMasterPageMasterMenuItem { Id = 4, Title = "Sample Grid Layout" },
                 });
             }
 

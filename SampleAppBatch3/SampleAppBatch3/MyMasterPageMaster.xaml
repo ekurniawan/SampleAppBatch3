@@ -7,20 +7,11 @@
              x:Class="SampleAppBatch3.MyMasterPageMaster"
              Title="Master">
   <StackLayout>
-    <ListView x:Name="MenuItemsListView"
+        <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
-      <d:ListView.ItemsSource>
-          <x:Array Type="{x:Type x:String}">
-              <x:String>Page 1</x:String>
-              <x:String>Page 2</x:String>
-              <x:String>Page 3</x:String>
-              <x:String>Page 4</x:String>
-              <x:String>Page 5</x:String>
-          </x:Array>
-      </d:ListView.ItemsSource>
-      <ListView.Header>
+            <ListView.Header>
         <Grid BackgroundColor="#03A9F4">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
@@ -36,7 +27,7 @@
           <Label
               Grid.Column="1"
               Grid.Row="2"
-              Text="AppName"
+              Text="Chevron App"
               Style="{DynamicResource SubtitleStyle}"/>
         </Grid>
       </ListView.Header>
@@ -48,7 +39,7 @@
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
                     d:Text="{Binding .}"
-                    FontSize="24"/>
+                    FontSize="20"/>
             </StackLayout>
           </ViewCell>
         </DataTemplate>
