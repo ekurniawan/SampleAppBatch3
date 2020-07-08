@@ -31,16 +31,45 @@ namespace SampleAppBatch3.DAL
         {
             //return _conn.Query<Employee>("select * from Employee order by EmpName asc");
             //var results = _conn.Table<Employee>().OrderBy(e => e.EmpName);
-            var result = from e in _conn.Table<Employee>()
+            var results = from e in _conn.Table<Employee>()
                          orderby e.EmpName
                          select e;
 
+            return results;
+        }
+
+        public Employee GetEmployeeById(int empId)
+        {
+            var result = (from e in _conn.Table<Employee>()
+                          where e.EmpId == empId
+                          select e).SingleOrDefault();
             return result;
         }
 
         public int InsertEmployee(Employee employee)
         {
-            var result = 
+            var result = _conn.Insert(employee);
+            return result;
+        }
+
+        public int EditEmployee(Employee employee)
+        {
+            var check = GetEmployeeById(employee.EmpId);
+            if (check == null)
+                throw new Exception("Data tidak ditemukan");
+
+            var result = _conn.Update(employee);
+            return result;
+        }
+
+        public int DeleteEmployee(Employee employee)
+        {
+            var check = GetEmployeeById(employee.EmpId);
+            if (check == null)
+                throw new Exception("Data tidak ditemukan");
+
+            var result = _conn.Delete(employee);
+            return result;
         }
     }
 }
