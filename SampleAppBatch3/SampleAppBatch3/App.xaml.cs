@@ -9,7 +9,7 @@ namespace SampleAppBatch3
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MyTabbedPage());
+            MainPage = new MyMasterPage();
             Application.Current.Properties["username"] = string.Empty;
         }
 
