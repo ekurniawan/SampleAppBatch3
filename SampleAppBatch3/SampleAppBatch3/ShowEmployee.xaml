@@ -27,6 +27,10 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem CommandParameter="{Binding EmpId}" 
+                                          Text="Delete" Clicked="MenuItem_Clicked" />
+                            </ViewCell.ContextActions>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="40" />
