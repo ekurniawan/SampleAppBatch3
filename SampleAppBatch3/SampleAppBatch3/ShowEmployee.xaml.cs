@@ -1,4 +1,5 @@
 ﻿using SampleAppBatch3.DAL;
+using SampleAppBatch3.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,14 @@ namespace SampleAppBatch3
         private async void btnAdd_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddEmployee());
+        }
+
+        private async void lvEmployee_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var selectedItem = (Employee)e.Item;
+            EditEmployee frmEditEmployee = new EditEmployee();
+            frmEditEmployee.BindingContext = selectedItem;
+            await Navigation.PushAsync(frmEditEmployee);
         }
     }
 }
