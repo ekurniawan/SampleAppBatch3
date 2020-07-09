@@ -22,7 +22,8 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="Emp ID :" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
-            <Entry x:Name="txtEmpID" Text="{Binding EmpId}" Grid.Row="0" Grid.Column="1" />
+            <Entry x:Name="txtEmpID" Text="{Binding EmpId}" Grid.Row="0" 
+                   Grid.Column="1" IsReadOnly="True" />
 
             <Label Text="Emp Name :" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
             <Entry x:Name="txtEmpName" Text="{Binding EmpName}" Grid.Row="1" Grid.Column="1" />
@@ -37,7 +38,7 @@
             <Entry x:Name="txtQualification" Text="{Binding Qualification}" Grid.Row="4" Grid.Column="1" />
 
             <StackLayout Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
-                <Button x:Name="btnEdit" Text="Edit Employee" />
+                <Button x:Name="btnEdit" Text="Edit Employee" Clicked="btnEdit_Clicked" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
