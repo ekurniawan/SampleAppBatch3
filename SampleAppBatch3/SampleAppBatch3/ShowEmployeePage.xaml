@@ -30,7 +30,7 @@
                         <ViewCell>
                             <ViewCell.ContextActions>
                                 <MenuItem CommandParameter="{Binding EmpId}" 
-                                          Text="Delete" />
+                                          Text="Delete" Clicked="MenuItem_Clicked" />
                             </ViewCell.ContextActions>
                             <Grid>
                                 <Grid.RowDefinitions>

@@ -60,5 +60,25 @@ namespace SampleAppBatch3
             editEmpPage.BindingContext = editEmp;
             await Navigation.PushAsync(editEmpPage);
         }
+
+        private async void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var menuItem = (MenuItem)sender;
+            var delId = Convert.ToInt32(menuItem.CommandParameter);
+            var result = await DisplayAlert("Konfirmasi", "Mau delete data?", "Yes", "No");
+            if (result)
+            {
+                try
+                {
+                    await _empServices.Delete(delId);
+                    await DisplayAlert("Keterangan", "Data berhasil didelete", "OK");
+                    await GetData();
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Kesalahan", ex.Message, "OK");
+                }
+            }
+        }
     }
 }
