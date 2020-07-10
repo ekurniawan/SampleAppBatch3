@@ -10,7 +10,7 @@ namespace SampleAppBatch3.Services
 {
     public static class Helpers
     {
-        public static string restUrl = 
+        public static string restUrl =
             "https://myactualbackendservices.azurewebsites.net";
     }
 

@@ -10,7 +10,7 @@ namespace SampleAppBatch3
         {
             InitializeComponent();
             //MainPage = new MyMasterPage();
-            MainPage = new NavigationPage(new ShowEmployee());
+            MainPage = new NavigationPage(new ShowEmployeePage());
             Application.Current.Properties["username"] = string.Empty;
         }
 

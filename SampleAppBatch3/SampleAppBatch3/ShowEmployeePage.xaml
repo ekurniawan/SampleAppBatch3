@@ -29,7 +29,7 @@
                         <ViewCell>
                             <ViewCell.ContextActions>
                                 <MenuItem CommandParameter="{Binding EmpId}" 
-                                          Text="Delete" Clicked="MenuItem_Clicked" />
+                                          Text="Delete" />
                             </ViewCell.ContextActions>
                             <Grid>
                                 <Grid.RowDefinitions>
@@ -49,7 +49,7 @@
                 </ListView.ItemTemplate>
                 <ListView.Footer>
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="btnAdd" Text="Add Employee" Clicked="btnAdd_Clicked" />
+                        <Button x:Name="btnAdd" Text="Add Employee" />
                     </StackLayout>
                 </ListView.Footer>
             </ListView>
