@@ -7,7 +7,7 @@
              x:Class="SampleAppBatch3.ShowEmployeePage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvEmployee">
+            <ListView x:Name="lvEmployee" IsPullToRefreshEnabled="True" Refreshing="lvEmployee_Refreshing">
                 <ListView.Header>
                     <Grid BackgroundColor="Navy">
                         <Grid.RowDefinitions>

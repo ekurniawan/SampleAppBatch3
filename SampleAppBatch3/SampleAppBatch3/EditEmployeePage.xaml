@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Employee Page"
+             x:Class="SampleAppBatch3.EditEmployeePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="120*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Emp ID :" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtEmpID" Text="{Binding EmpId}" Grid.Row="0" 
+                   Grid.Column="1" IsReadOnly="True" />
+
+            <Label Text="Emp Name :" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtEmpName" Text="{Binding EmpName}" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Designation :" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtDesignation" Text="{Binding Designation}" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="Department :" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtDepartment" Text="{Binding Department}" Grid.Row="3" Grid.Column="1" />
+
+            <Label Text="Qualification :" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtQualification" Text="{Binding Qualification}" Grid.Row="4" Grid.Column="1" />
+
+            <StackLayout Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                <Button x:Name="btnEdit" Text="Edit Employee"  />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

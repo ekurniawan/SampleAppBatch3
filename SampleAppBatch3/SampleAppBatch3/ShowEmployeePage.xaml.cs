@@ -45,5 +45,11 @@ namespace SampleAppBatch3
         {
             await Navigation.PushAsync(new AddEmployeePage());
         }
+
+        private async void lvEmployee_Refreshing(object sender, EventArgs e)
+        {
+            await GetData();
+            lvEmployee.IsRefreshing = false;
+        }
     }
 }
