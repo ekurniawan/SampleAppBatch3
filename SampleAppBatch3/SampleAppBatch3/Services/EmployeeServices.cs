@@ -41,5 +41,23 @@ namespace SampleAppBatch3.Services
                 throw new Exception(ex.Message); 
             }
         }
+
+        public async Task Insert(Employee emp)
+        {
+            var uri = new Uri($"{Helpers.restUrl}/api/Employee");
+            try
+            {
+                var jsonData = JsonConvert.SerializeObject(emp);
+                var content = new StringContent(jsonData, Encoding.UTF8,
+                    "application/json");
+                var response = await _client.PostAsync(uri, content);
+                if (!response.IsSuccessStatusCode)
+                    throw new Exception("Gagal menambahkan data");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
