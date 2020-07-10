@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Add Employee"
+             x:Class="SampleAppBatch3.AddEmployeePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="120*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Emp Name :" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtEmpName" Placeholder="insert emp name" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Designation :" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtDesignation" Placeholder="insert designation" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Department :" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtDepartment" Placeholder="insert department" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="Qualification :" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="txtQualification" Placeholder="insert qualification" Grid.Row="3" Grid.Column="1" />
+
+            <StackLayout Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+                <Button x:Name="btnSave" Text="Save Employee" Clicked="btnSave_Clicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

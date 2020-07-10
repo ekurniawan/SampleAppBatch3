@@ -30,5 +30,10 @@ namespace SampleAppBatch3
             base.OnAppearing();
             await GetData();
         }
+
+        private async void btnAdd_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddEmployeePage());
+        }
     }
 }

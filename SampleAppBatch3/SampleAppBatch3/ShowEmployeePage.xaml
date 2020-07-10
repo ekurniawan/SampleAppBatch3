@@ -49,7 +49,7 @@
                 </ListView.ItemTemplate>
                 <ListView.Footer>
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="btnAdd" Text="Add Employee" />
+                        <Button x:Name="btnAdd" Text="Add Employee" Clicked="btnAdd_Clicked" />
                     </StackLayout>
                 </ListView.Footer>
             </ListView>
