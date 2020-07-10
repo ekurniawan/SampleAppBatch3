@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,7 +22,17 @@ namespace SampleAppBatch3
 
         private async Task GetData()
         {
-            lvEmployee.ItemsSource = await _empServices.GetAll();
+            var current = Connectivity.NetworkAccess;
+            //var profiles = Connectivity.ConnectionProfiles;
+            //if(profiles.Contains(ConnectionProfile.WiFi))
+            if (current == NetworkAccess.Internet)
+            {
+                lvEmployee.ItemsSource = await _empServices.GetAll();
+            }
+            else
+            {
+                await DisplayAlert("Kesalahan", "Tidak ada koneksi internet", "OK");
+            }
         }
 
         protected async override void OnAppearing()
