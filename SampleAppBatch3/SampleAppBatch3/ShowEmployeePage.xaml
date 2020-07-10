@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Show Employee Page"
+             x:Class="SampleAppBatch3.ShowEmployeePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvEmployee">
+                <ListView.Header>
+                    <Grid BackgroundColor="Navy">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Emp Name" FontAttributes="Bold" 
+                              VerticalOptions="Center" TextColor="White" Grid.Row="0" Grid.Column="0" />
+                        <Label Text="Department" FontAttributes="Bold" TextColor="White" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+                        <Label Text="Qualification" FontAttributes="Bold" TextColor="White" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" />
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem CommandParameter="{Binding EmpId}" 
+                                          Text="Delete" Clicked="MenuItem_Clicked" />
+                            </ViewCell.ContextActions>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding EmpName}" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+                                <Label Text="{Binding Department}" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+                                <Label Text="{Binding Qualification}" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="btnAdd" Text="Add Employee" Clicked="btnAdd_Clicked" />
+                    </StackLayout>
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
