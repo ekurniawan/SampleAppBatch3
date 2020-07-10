@@ -25,7 +25,7 @@ namespace SampleAppBatch3
         {
             var current = Connectivity.NetworkAccess;
             //var profiles = Connectivity.ConnectionProfiles;
-            //if(profiles.Contains(ConnectionProfile.WiFi))
+            //if(profiles.Contains(ConnectionProfile.))
             if (current == NetworkAccess.Internet)
             {
                 lvEmployee.ItemsSource = await _empServices.GetAll();

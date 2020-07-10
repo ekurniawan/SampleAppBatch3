@@ -35,8 +35,8 @@ namespace SampleAppBatch3
                 {
                     new MyMasterPageMasterMenuItem { Id = 0, Title = "Main Menu",
                         TargetType=typeof(MenuPage),ImageSource="telpon.png" },
-                    new MyMasterPageMasterMenuItem { Id = 1, Title = "Sample Image List",
-                        TargetType=typeof(SampleImageList),ImageSource="jam.png"},
+                    new MyMasterPageMasterMenuItem { Id = 1, Title = "Data Employee",
+                        TargetType=typeof(ShowEmployeePage),ImageSource="jam.png"},
                     new MyMasterPageMasterMenuItem { Id = 2, Title = "Sample Tabbed Page",
                         TargetType=typeof(MyTabbedPage),ImageSource="telpon.png"},
                     new MyMasterPageMasterMenuItem { Id = 3, Title = "Sample Custom List",

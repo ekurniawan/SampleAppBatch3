@@ -1,4 +1,11 @@
-﻿using System;
+using Syncfusion.XForms.iOS.ComboBox;
+using Syncfusion.XForms.iOS.Core;
+using Syncfusion.XForms.iOS.Graphics;
+using Syncfusion.SfRating.XForms.iOS;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.Border;
+using Syncfusion.XForms.iOS.Buttons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,6 +30,12 @@ namespace SampleAppBatch3.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SfGradientViewRenderer.Init();
+            SfRatingRenderer.Init();
+            SfComboBoxRenderer.Init();
+            SfListViewRenderer.Init();
+            SfBorderRenderer.Init();
+            SfButtonRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
