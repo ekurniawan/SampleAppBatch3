@@ -1,4 +1,5 @@
-﻿using SampleAppBatch3.Services;
+﻿using SampleAppBatch3.Models;
+using SampleAppBatch3.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,14 @@ namespace SampleAppBatch3
         {
             await GetData();
             lvEmployee.IsRefreshing = false;
+        }
+
+        private async void lvEmployee_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var editEmp = (Employee)e.Item;
+            EditEmployeePage editEmpPage = new EditEmployeePage();
+            editEmpPage.BindingContext = editEmp;
+            await Navigation.PushAsync(editEmpPage);
         }
     }
 }

@@ -38,7 +38,7 @@
             <Entry x:Name="txtQualification" Text="{Binding Qualification}" Grid.Row="4" Grid.Column="1" />
 
             <StackLayout Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
-                <Button x:Name="btnEdit" Text="Edit Employee"  />
+                <Button x:Name="btnEdit" Text="Edit Employee" Clicked="btnEdit_Clicked"  />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
